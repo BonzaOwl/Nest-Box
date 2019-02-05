@@ -6,7 +6,7 @@ I wanted a simple theme with no sidebar, no added extra's that focused on the co
 
 ## What's Used
 
-[*] Bootstrap 4
-[*] Font Awesome 
+* Bootstrap 4
+* Font Awesome 
 
 
