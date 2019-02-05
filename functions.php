@@ -75,49 +75,30 @@ function exclude_pages($query) {
     }
     add_filter('pre_get_posts','exclude_pages');
 
-// Custom settings
-function custom_settings_add_menu() {
-    add_menu_page( 'Custom Settings', 'Custom Settings', 'manage_options', 'custom-settings', 'custom_settings_page', null, 99 );
+/**
+ * Responsive Images
+ */
+
+function bootstrap_responsive_images( $html )
+{
+    $classes = 'img-fluid'; // separated by spaces, e.g. 'img image-link'
+    
+    // check if there are already classes assigned to the anchor
+    
+    if ( preg_match('/<img.*? class="/', $html) ) 
+    {
+      $html = preg_replace('/(<img.*? class=".*?)(".*?\/>)/', '$1 ' . $classes . ' $2', $html);
+    } 
+    
+    else 
+    {
+      $html = preg_replace('/(<img.*?)(\/>)/', '$1 class="' . $classes . '" $2', $html);
+    }
+    
+    // remove dimensions from images,, does not need it!
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
   }
-  add_action( 'admin_menu', 'custom_settings_add_menu' );
 
-// Create Custom Global Settings
-function custom_settings_page() { ?>
-    <div class="wrap">
-      <h1>Custom Settings</h1>
-      <form method="post" action="options.php">
-         <?php
-             settings_fields( 'section' );
-             do_settings_sections( 'theme-options' );      
-             submit_button(); 
-         ?>          
-      </form>
-    </div>
-  <?php }
-
-// Twitter
-function setting_github() { ?>
-    <input type="text" name="github" id="github" value="<?php echo get_option( 'github' ); ?>" />
-  <?php }
-
-function custom_settings_page_setup() {
-    add_settings_section( 'section', 'All Settings', null, 'theme-options' );
-    add_settings_field( 'github', 'GitHub URL', 'setting_github', 'theme-options', 'section' );
-  
-    register_setting('section', 'github');
-  }
-  add_action( 'admin_init', 'custom_settings_page_setup' );
-
-// basics, same for all    
-echo '<meta property="og:locale" content="en_US">' . "\n";
-echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">' . "\n";
-echo '<meta property="og:type" content="article">' . "\n";
-//echo '<meta name="twitter:creator" content="@">' . "\n";
-//echo '<meta name="twitter:site" content="@">' . "\n";
-//echo '<meta name="twitter:domain" content="">' . "\n";
-echo '<meta property="og:site_name" content="Code Name Owl">' . "\n";
-// title, URL, description
-echo '<meta property="og:title" content="' . $title . '">' . "\n";
-echo '<meta property="og:url" content="' . get_permalink() . '">' . "\n";
-echo '<meta property="og:description" content="' . $meta . '">' . "\n";
-echo '<meta name="description" content="' . $meta . '">' . "\n";
+  add_filter( 'the_content','bootstrap_responsive_images',10 );
+  add_filter( 'post_thumbnail_html', 'bootstrap_responsive_images', 10 );
