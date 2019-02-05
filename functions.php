@@ -8,9 +8,10 @@ add_theme_support( 'title-tag' );
 
 // Add scripts and stylesheets
 function nestbox_scripts() {
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css', array(), '3.3.6' );
 	wp_enqueue_style( 'feathers', get_template_directory_uri() . '/css/feathers.css' );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
+    wp_enqueue_style( 'FontAwesome', get_template_directory_uri() . '/vendor/fontawesome/css/all.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'nestbox_scripts' );
@@ -19,8 +20,6 @@ add_action( 'wp_enqueue_scripts', 'nestbox_scripts' );
 function nestbox_google_fonts() {
     wp_register_style('GoogleFont', 'http://fonts.googleapis.com/css?family=Nunito|Roboto:400,600,700,800');
     wp_enqueue_style( 'GoogleFont');
-    wp_register_style('FontAwesome', '//use.fontawesome.com/releases/v5.0.13/css/all.css');
-    wp_enqueue_style( 'FontAwesome' );
 }
 
 add_action('wp_print_styles', 'nestbox_google_fonts');
