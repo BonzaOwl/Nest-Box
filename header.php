@@ -32,7 +32,7 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo get_option('github'); ?>" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="nav-link" href="https://github.com/BonzaOwl" target="_blank"><i class="fab fa-github"></i></a>
             </li>           
         </ul>
       </div>
