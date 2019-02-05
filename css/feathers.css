@@ -271,11 +271,13 @@ time
 .single-category 
 {
     color: #000;
+    font-size: .9rem;
 }
 
 .category 
 {
     color: #000;
+    
 }
 
 @media (min-width:700px)
