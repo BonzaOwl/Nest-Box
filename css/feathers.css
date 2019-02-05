@@ -1,0 +1,577 @@
+/* 
+ /\_/\
+((@v@))
+():::()
+ VV-VV 
+ */
+
+body 
+{
+    padding-top: 5rem;
+    color:#404040;
+    font-size:1rem
+}
+
+.main-content 
+{
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.container
+{
+    max-width:850px;
+    padding:0 15px;
+    margin-left:auto;
+    margin-right:auto
+}
+
+::selection /* The color set when text is highlighted */
+{
+    background:rgba(255,165,0,.8);
+    color:#111
+}
+
+  @media (min-width: 768px) 
+  {
+    .bd-placeholder-img-lg 
+    {
+      font-size: 3.5rem;
+    }
+  }
+
+html 
+{
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font:normal normal normal 1rem/1.6 -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size:1rem
+}
+
+.navbar ul li a:hover /* Hover colors in the navbar */
+{
+    color: #ffa500 !important;
+}
+
+.site-title /*The main site title on index */
+{
+    margin-bottom: 10px !important;
+}
+
+a
+{
+    color:#ffa500;
+    text-decoration:none
+}
+
+a:active,a:focus,a:hover
+{
+    color:#ffa500;
+    text-decoration:underline;
+    outline:0
+}
+
+img
+{
+    border:0
+}
+
+
+/*
+* HEADING STYLES
+*/
+
+h1,h2,h3,h4,h5
+{
+    margin:0 0 1.8rem;
+    font-weight:600;
+    font-family:Nunito,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height:1.3;
+    color:#111
+}
+
+h1,h2,h3,h4
+{
+    font-weight:700
+}
+
+h1:not(:first-child),h2:not(:first-child),h3:not(:first-child),h4:not(:first-child),h5:not(:first-child)
+{
+    margin:0 0 1rem
+}
+
+h1
+{
+    font-size:2.2rem
+}
+
+h2
+{
+    font-size:1.9rem
+}
+
+h3
+{
+    font-size:1.6rem
+}
+
+h4
+{
+    font-size:1.4rem
+}
+
+h5
+{
+    font-size:1.3rem;
+}
+
+b,strong
+{
+    font-weight:700
+}
+
+label
+{
+    font-weight:700;
+    font-size:1rem;
+    max-width:100%;
+    display:block;
+    margin:1rem 0 .5rem
+}
+    
+@media (min-width:700px)
+{
+    .split-form label
+    {
+        text-align:right;
+        padding:0 .5rem;
+        margin-bottom:1rem
+    }
+}
+
+/* 
+* SECTION STYLES
+*/
+
+.section
+{
+    margin:40px 0
+}
+
+.section:first-of-type
+{
+    margin-top:0;
+    margin-bottom:0
+}
+
+.section>h2
+{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-align:center;
+    align-items:center
+
+}
+    
+@media (min-width:700px)
+{
+    .section
+    {
+        margin:80px 0
+    }
+}
+
+/* 
+* POST STYLES
+*/
+
+.post
+{
+    background: #ffd17e;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-align:center;
+    align-items:center;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    padding:.75rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    border-radius:4px;
+}
+
+.post:hover
+{
+    background:#ffa500;
+    text-decoration:none!important
+}
+
+.post:hover .post-title
+{
+    color:#111
+}
+
+.post:last-of-type
+{
+    border-bottom:none
+}
+
+.post-title
+{
+    font-weight:500;
+    color:#333;
+    margin-right:2rem
+}
+
+.post-title,a.post-title
+{
+    display:block
+}
+
+a.post-title:hover
+{
+    color:#111
+}
+
+.post-date
+{
+    color:#888;
+    font-size:.9rem;
+    display:none
+}
+
+.date
+{
+    font-size:.9rem;
+    color:#888
+}
+
+time 
+{
+    color: #000;
+}
+
+@media (max-width:990px)
+{
+    .mobile-hide
+    {
+        display: none;
+    }
+
+    .post-title
+    {
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+}
+
+.single-category 
+{
+    color: #000;
+}
+
+.category 
+{
+    color: #000;
+}
+
+@media (min-width:700px)
+{
+    .post-date,.post-description,.single-category
+    {
+        display:block
+    }
+}
+
+.posts-links
+{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    margin:2rem 0
+}
+
+.posts-links a
+{
+    color:#111;
+    font-weight:700;
+    font-size:1rem
+}
+
+/*
+* SINGLE POST STYLES
+*/
+
+.lead
+{
+    font-size:1rem
+}
+
+.single-header
+{
+    margin-bottom:30px;
+    text-align:center
+}
+
+@media (min-width:700px)
+{
+    .single-header
+    {
+        text-align:left
+    }
+}
+
+.single-header h1
+{
+    margin:.5rem 0
+}
+
+/* 
+* TAB STYLES (Category)
+*/
+
+.cat-container
+{
+    margin:10px 0;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -ms-flex-align:center;
+    align-items:center;
+    -ms-flex-pack:center;
+    justify-content:center
+}
+
+.cat-container .cat
+{
+    padding:.4rem .8rem;
+    background:#f2f2f2;
+    color:#111;
+    border-radius:4px;
+    font-size:.8rem;
+    margin-right:.4rem;
+    margin-bottom:.4rem
+}
+    
+.cat-container .cat:active,.cat-container .cat:hover
+{
+    background:#ffa500;
+    text-decoration: none;
+}
+    
+.cat-container .cat:last-of-type
+{
+    margin-right:0
+}
+
+.category-title
+{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    -ms-flex-align:center;
+    align-items:center;
+    margin-bottom:1rem
+}
+
+/*
+* SEARCH STYLES 
+*/
+
+select::-ms-expand
+{
+    display:none
+}
+
+.reader-text
+{
+    clip:rect(1px,1px,1px,1px);
+    position:absolute!important;
+    height:1px;width:1px;
+    overflow:hidden
+}
+
+[type=search],select
+{
+   display:block;
+   border:0 solid #f2f2f2;
+   border-radius:4px;
+   padding:.75rem;
+   outline:none;
+   background:#f2f2f2;
+   margin-bottom:.5rem;
+   font-size:1rem;
+   width:100%;
+   max-width:100%;
+   line-height:1
+}
+
+[type=search]:hover,select:hover
+{
+   background:#f2f2f2;
+   border:0 solid #e5e5e5
+}
+
+[type=search]:active,[type=search]:focus,select:active,select:focus
+{
+   background:#eaeaea;
+   border:0 solid #3f80ff
+}
+    
+.search-enabled
+{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    -ms-flex-align:center;
+    align-items:center;
+    margin-bottom:1rem
+}
+    
+.search-icon
+{
+    position:absolute;
+    right:.6rem;
+    top:calc(50% - .5em)
+}
+
+.search-wrapper
+{
+    position:relative
+}
+
+.search-wrapper [type=search]
+{
+    -webkit-appearance:none;
+    padding-right:2rem
+}
+
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration
+{
+    display:none
+}
+    
+.search-form [type=search]
+{
+    width:auto;background:#f2f2f2
+}
+
+.search-form [type=search]:hover
+{
+    border:0
+}
+    
+.search-form [type=search]:active,.search-form [type=search]:focus
+{
+    box-shadow:none;border:0;color:#111;background:#ffa500
+}
+
+/*
+* BLOCKQUOTE STYLES
+*/
+    
+blockquote cite
+{
+    display:block;
+    margin-top:.5rem;
+    font-size:.9rem;
+    text-align:right;
+    font-family:-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color:rgba(0,0,0,.4)
+}
+    
+blockquote.testimonial
+{
+    padding-left:0;border-left:0
+}
+    
+blockquote.alert,blockquote.details,blockquote.info,blockquote.note,blockquote.success
+{
+    color:#111;
+    font-family:Nunito,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif
+}
+    
+blockquote.alert
+{
+    background:#ffd9e0;border-color:#ff4a6e
+}
+
+blockquote.info
+{
+    background:#fff6d5;border-color:#f0d461
+}
+
+blockquote.success
+{
+    background:#86e29b;border-color:#28a745
+}
+
+blockquote.note
+{
+    background:#f0f0f0;border-color:#eee
+}
+
+blockquote.details
+{
+    background:#e7efff;border-color:#a5c3ff
+}
+
+blockquote code{margin:1rem 0 0}
+
+@media (min-width:700px)
+{
+    blockquote
+    {
+        border-left:16px solid #ffa500;
+        font-size:1.3rem;
+        line-height:1.5;
+        padding:2rem
+    }
+}
+
+blockquote cite
+{
+    margin-top:1rem;
+}
+
+blockquote p
+{
+    font-size:1.3rem;
+}
+
+blockquote code
+{
+    font-size:.9rem;
+    margin:2rem 0 0;
+}
+
+/* 
+* FOOTER STYLES
+*/
+
+.footer
+{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-align:center;
+    align-items:center;
+    text-align: center;
+    height:100px;
+    color:#888
+}
+
+.footer strong
+{
+    color:#111
+}
