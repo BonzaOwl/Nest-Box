@@ -18,7 +18,7 @@ add_action( 'wp_enqueue_scripts', 'nestbox_scripts' );
 
 // Add Google Fonts
 function nestbox_google_fonts() {
-    wp_register_style('GoogleFont', 'http://fonts.googleapis.com/css?family=Nunito|Roboto:400,600,700,800');
+    wp_register_style('GoogleFont', '//fonts.googleapis.com/css?family=Nunito|Roboto:400,600,700,800');
     wp_enqueue_style( 'GoogleFont');
 }
 
