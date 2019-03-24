@@ -33,7 +33,10 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="https://github.com/BonzaOwl" target="_blank"><i class="fab fa-github"></i></a>
-            </li>           
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/BonzaOwl" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            </li>            
         </ul>
       </div>
     </nav>
