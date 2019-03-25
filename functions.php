@@ -102,3 +102,14 @@ function bootstrap_responsive_images( $html )
 
   add_filter( 'the_content','bootstrap_responsive_images',10 );
   add_filter( 'post_thumbnail_html', 'bootstrap_responsive_images', 10 );
+
+  /**
+ * Social media share buttons
+ */
+function wcr_share_buttons() {
+    $url = urlencode(get_the_permalink());
+    $title = urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'));
+    $media = urlencode(get_the_post_thumbnail_url(get_the_ID(), 'full'));
+
+    include( locate_template('share.php', false, false) );
+}

@@ -23,6 +23,9 @@
 			
 		</header>
 
-		<?php the_content(); ?>		
+		<?php the_content(); ?>	
+
+        <?php wcr_share_buttons(); ?>
+
     </div>
 </article>
