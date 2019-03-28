@@ -11,7 +11,9 @@ function nestbox_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css', array(), '3.3.6' );
 	wp_enqueue_style( 'feathers', get_template_directory_uri() . '/css/feathers.css' );
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
-    wp_enqueue_style( 'FontAwesome', get_template_directory_uri() . '/vendor/fontawesome/css/all.css');
+    wp_enqueue_style( 'FontAwesome', get_template_directory_uri() . '/vendor/fontawesome/css/fontawesome.min.css');
+    wp_enqueue_style( 'FontAwesomeBrands', get_template_directory_uri() . '/vendor/fontawesome/css/brands.min.css');
+    wp_enqueue_style( 'FontAwesomeSolid', get_template_directory_uri() . '/vendor/fontawesome/css/solid.min.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'nestbox_scripts' );
