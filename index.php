@@ -28,6 +28,7 @@ get_header(); ?>
             <a href="<?php echo site_url(); ?>/category/c-sharp" class="cat">C#</a>
             <a href="<?php echo site_url(); ?>/category/powershell" class="cat">Powershell</a>
             <a href="<?php echo site_url(); ?>/category/microsoft-sql-server" class="cat">SQL Server</a>
+            <a href="<?php echo site_url(); ?>/category/personal" class="cat">Personal</a>
         </div>
 
         <!-- Search Box -->
