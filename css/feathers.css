@@ -199,18 +199,27 @@ label
     padding:.75rem;
     margin-top: .75rem;
     margin-bottom: .75rem;
+    margin-left: .75rem;
+    margin-right: .75rem;
     border-radius:4px;
 }
 
 .post:hover
 {
     background:#ffa500;
-    text-decoration:none!important
+    text-decoration:none!important;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
 }
 
 .post:hover .post-title
 {
-    color:#111
+    color:#111;
+    text-decoration: none;
 }
 
 .post:last-of-type
@@ -266,6 +275,104 @@ time
         margin-right: 0 !important;
     }
 
+}
+
+/* Skills
+*/
+
+.skills-container
+{
+    margin:10px 0;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -ms-flex-align:center;
+    align-items:center;
+    -ms-flex-pack:center;
+    justify-content:center
+}
+
+.skills-container .skills
+{
+    padding:.4rem .8rem;
+    background: #ffd17e;
+    color:#111;
+    border-radius:4px;
+    font-size:.8rem;
+    margin-right:.4rem;
+    margin-bottom:.4rem
+}
+    
+.skills-container .skills:active,.skills-container .skills:hover
+{
+    background:#ffa500;
+    text-decoration: none;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+    
+.skills-container .skills:last-of-type
+{
+    margin-right:0
+}
+
+.skills-title
+{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    -ms-flex-align:center;
+    align-items:center;
+    margin-bottom:1rem
+}
+
+
+/* All Posts Link */
+
+
+
+.all-posts-container .all-posts
+{
+    padding:.4rem .8rem;
+    background: #ffd17e;
+    color:#111;
+    border-radius:4px;
+    font-size:.8rem;
+    margin-right:.4rem;
+    margin-bottom:.4rem
+}
+    
+.all-posts-container .all-posts:active,.all-posts-container .all-posts:hover
+{
+    background:#ffa500;
+    text-decoration: none;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+.skills-title
+{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    -ms-flex-align:center;
+    align-items:center;
+    margin-bottom:1rem
 }
 
 .single-category 
@@ -620,4 +727,9 @@ blockquote code
 
 .share-buttons li:last-child a {
     border-radius: 0 3px 3px 0;
+}
+
+div {
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
 }

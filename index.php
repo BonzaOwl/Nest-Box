@@ -23,42 +23,63 @@ get_header(); ?>
       <!--The site description, fed from the site settings -->
       <h5><?php echo get_bloginfo( 'description' ); ?></h5>
 
-        <!--Category Listings, Add more manually, this isn't fed from a menu -->
-        <div class="cat-container">
-            <a href="<?php echo site_url(); ?>/category/c-sharp" class="cat">C#</a>
-            <a href="<?php echo site_url(); ?>/category/powershell" class="cat">Powershell</a>
-            <a href="<?php echo site_url(); ?>/category/microsoft-sql-server" class="cat">SQL Server</a>
-            <a href="<?php echo site_url(); ?>/category/personal" class="cat">Personal</a>
-        </div>
-
-        <!-- Search Box -->
-        <header class="search-enabled">
-          <form id="search-form" role="search" class="search-form" method="get" action="<?php echo home_url( '/' ); ?>">
-          <div class="search-wrapper">
-            <input id="filter" type="search" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>"
-            name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>">
-            <i class="fas fa-search search-icon"></i>
-          </div>
-        </form>
-
       </header>
+
+      <div class="about-me" style="margin-top: 40px; background-color: #f2f2f2; border-radius 5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;padding-top: .75rem; padding-bottom: .75rem">
+
+        <h2>Hey! I'm Bonza</h2>              
+        <section id="about">        
+        <p>
+          I am a developer based in the U.K currently working with C# & Microsoft SQL Server. I write about what I learn here. I also like to make things in my spare time.</p>
+        <!--Category Listings, Add more manually, this isn't fed from a menu -->
+        <div class="skills-container">
+            <a href="<?php echo site_url(); ?>/category/c-sharp" class="skills">C#</a>
+            <a href="<?php echo site_url(); ?>/category/powershell" class="skills">Powershell</a>
+            <a href="<?php echo site_url(); ?>/category/microsoft-sql-server" class="skills">SQL Server</a>
+            <a href="<?php echo site_url(); ?>/category/personal" class="skills">Personal</a>
+        </div>
+        </section>
+
+      </div>
     
     <!--Start the post loop-->
-    <section>
+    
+    <div class="latest-posts" style="margin-top: 40px; background-color: #f2f2f2; border-radius 5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;padding-top: .75rem; padding-bottom: .75rem">
+      <h2>Latest Posts</h2>
+      <section>
 
-      <?php $args = array(
-          'order'          => 'desc',
-          'orderby'        => 'publish_date',
-          
-        );
-        $latest = new WP_Query( $args );
-        if ( $latest->have_posts() ) :  while ( $latest->have_posts() ) : $latest->the_post(); 
-          get_template_part( 'content', get_post_format() );
-              endwhile; endif; wp_reset_postdata(); 
-          
-      ?>
+        <?php $args = array(
+            'order'          => 'desc',
+            'orderby'        => 'publish_date',
+            'showposts'     => '5'
+            
+          );
+          $latest = new WP_Query( $args );
+          if ( $latest->have_posts() ) :  while ( $latest->have_posts() ) : $latest->the_post(); 
+            get_template_part( 'content', get_post_format() );
+                endwhile; endif; wp_reset_postdata(); 
+            
+        ?>
 
-    </section>
+        <div class="all-posts-container">
+        <a href="/posts" class="all-posts">View All</a>
+        </a>
+
+      </section>
+    </div>
+  
+    <div class="latest-photos" style="margin-top: 40px; background-color: #f2f2f2; border-radius 5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;padding-top: .75rem; padding-bottom: .75rem">
+
+      <h2>Photography</h2>              
+      <section id="photos">
+      <img style="margin:5px;5px;5px;5px" src="<?php bloginfo('template_url'); ?>/images/1.jpg">
+      <img style="margin:5px;5px;5px;5px" src="<?php bloginfo('template_url'); ?>/images/2.jpg">
+      <img style="margin:5px;5px;5px;5px" src="<?php bloginfo('template_url'); ?>/images/3.jpg">
+      <img style="margin:5px;5px;5px;5px" src="<?php bloginfo('template_url'); ?>/images/4.jpg">
+             
+      </section>
+
+    </div>
 
   </div>
 
