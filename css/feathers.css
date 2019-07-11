@@ -13,8 +13,7 @@ body
 }
 
 .main-content 
-{
-    padding: 2rem 1.5rem;
+{    
     text-align: center;
 }
 
@@ -50,9 +49,32 @@ html
     font-size:1rem
 }
 
-.navbar ul li a:hover /* Hover colors in the navbar */
+.nav 
 {
-    color: #ffa500 !important;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 3;
+    width:100%;
+    background: #000000;
+
+}
+
+.nav-container
+{
+    padding: 0 1.5rem;
+    height: 55px;
+    max-width: 850px;
+    margin: auto;
+    justify-content: space-between;
+    -webkit-transition: height .3s ease;
+    transition: height .3s ease; 
+    display: flex;
+    align-items: center;
+}
+
+a:hover.link {
+    color: #ffa500;
 }
 
 .site-title /*The main site title on index */
