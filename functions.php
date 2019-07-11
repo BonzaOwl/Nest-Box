@@ -18,6 +18,12 @@ function nestbox_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'nestbox_scripts' );
 
+add_action( 'wp_head', 'add_viewport_meta_tag' , '1' );
+
+function add_viewport_meta_tag() {
+    echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />';
+}
+
 // Add Google Fonts
 function nestbox_google_fonts() {
     wp_register_style('GoogleFont', '//fonts.googleapis.com/css?family=Nunito|Roboto:400,600,700,800');
