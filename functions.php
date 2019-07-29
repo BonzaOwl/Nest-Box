@@ -121,3 +121,35 @@ function wcr_share_buttons() {
 
     include( locate_template('share.php', false, false) );
 }
+
+//----------------------------------------------
+//--------------add theme support for thumbnails
+//----------------------------------------------
+if ( function_exists( 'add_theme_support')){
+	add_theme_support( 'post-thumbnails' );
+}
+add_image_size( 'admin-list-thumb', 80, 80, true); //admin thumbnail
+
+/**
+ * Custom Post Type
+ */
+
+ // Custom Post Type
+function create_my_custom_post() {
+	register_post_type( 'photography',
+			array(
+			'labels' => array(
+	'name' => __( 'Photography' ),
+	'singular_name' => __( 'Photography' ),
+			),
+			'public' => true,
+			'has_archive' => true,
+			'supports' => array(
+	'title',
+	'editor',
+	'thumbnail',
+	'custom-fields'
+			)
+	));
+}
+add_action( 'init', 'create_my_custom_post' );
