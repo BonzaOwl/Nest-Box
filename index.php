@@ -80,10 +80,20 @@ get_header(); ?>
 
           <h2>Photography</h2>              
           <section id="photos">
-          <img style="margin:5px;5px;5px;5px" src="<?php bloginfo('template_url'); ?>/images/1.jpg">
-          <img style="margin:5px;5px;5px;5px" src="<?php bloginfo('template_url'); ?>/images/2.jpg">
-          <img style="margin:5px;5px;5px;5px" src="<?php bloginfo('template_url'); ?>/images/3.jpg">
-          <img style="margin:5px;5px;5px;5px" src="<?php bloginfo('template_url'); ?>/images/4.jpg">
+
+          <?php $args = array(
+                'post_type' => 'photography',
+                'order'          => 'desc',
+                'orderby'        => 'publish_date',
+                'showposts'     => '5'
+                
+              );
+              $latest = new WP_Query( $args );
+              if ( $latest->have_posts() ) :  while ( $latest->have_posts() ) : $latest->the_post();
+              get_template_part( 'content-photo', get_post_format() );                 
+                    endwhile; endif; wp_reset_postdata(); 
+                
+            ?>
                 
           </section>
 
