@@ -209,6 +209,31 @@ label
 * POST STYLES
 */
 
+.home-post
+{
+    background: #ffd17e;   
+    padding:.75rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    margin-left: .75rem;
+    margin-right: .75rem;
+    border-radius:4px;
+}
+
+.home-post-photo
+{  
+    display: inline-block;
+    -ms-flex-align:center;
+    align-items:center;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    margin-left: .75rem;
+    margin-right: .75rem;
+    border-radius:4px;
+}
+
 .post
 {
     background: #ffd17e;
@@ -244,6 +269,12 @@ label
     text-decoration: none;
 }
 
+.post:hover .home-post-title
+{
+    color:#111;
+    text-decoration: none;
+}
+
 .post:last-of-type
 {
     border-bottom:none
@@ -256,7 +287,19 @@ label
     margin-right:2rem
 }
 
+.home-post-title
+{
+    font-weight:800;
+    color:#333;
+    margin-top:1rem;
+}
+
 .post-title,a.post-title
+{
+    display:block
+}
+
+a.home-post-title
 {
     display:block
 }
@@ -266,11 +309,28 @@ a.post-title:hover
     color:#111
 }
 
+a.home-post-title:hover
+{
+    color:#111
+}
+
 .post-date
 {
     color:#888;
     font-size:.9rem;
     display:none
+}
+
+.home-post-date
+{
+    padding: .4rem .8rem;
+    background: #f2f2f2;
+    color: #111;
+    border-radius: 4px;
+    font-size: .8rem;
+    margin-right: .4rem;
+    margin-bottom: .4rem;
+    display:inline;
 }
 
 .date
@@ -356,6 +416,19 @@ time
     margin-bottom:1rem
 }
 
+/* Category Single */
+
+.category-high {
+    padding: .4rem .8rem;
+    background: #f2f2f2;
+    color: #111;
+    border-radius: 4px;
+    font-size: .8rem;
+    margin-right: .4rem;
+    margin-bottom: .4rem;
+    display: inline;
+}
+
 
 /* All Posts Link */
 
@@ -411,7 +484,7 @@ time
 
 @media (min-width:700px)
 {
-    .post-date,.post-description,.single-category
+    .home-post-date,.post-date,.post-description,.single-category
     {
         display:block
     }
