@@ -8,7 +8,7 @@
 
 <footer class="footer">
         <div class="container">
-        <small><strong>Built By </strong><i style="color:#ffa500" class="fas fa-hand-paper"></i>  <strong>Powered By </strong><i style="color:#ffa500" class="fas fa-beer"></i></small>
+        <small><strong>Built By </strong>Hand  <strong>Powered By </strong>Beer</small>
     </div>
 </footer>
 
