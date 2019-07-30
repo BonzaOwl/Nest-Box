@@ -9,8 +9,7 @@
 <html lang="en">
   <head>
     <!-- Call the wordpress header to get meta tags and enqueue styles -->
-    <?php wp_head(); ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <?php wp_head(); ?>    
   </head>
 
   <body>
