@@ -9,7 +9,7 @@ body
 {
     padding-top: 5rem;
     color:#404040;
-    font-size:1rem
+    font-size:1rem;
 }
 
 .main-content 
@@ -44,8 +44,7 @@ html
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
     -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    font:normal normal normal 1rem/1.6 -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    -moz-osx-font-smoothing:grayscale;    
     font-size:1rem
 }
 
@@ -108,8 +107,7 @@ img
 h1,h2,h3,h4,h5
 {
     margin:0 0 1.8rem;
-    font-weight:600;
-    font-family:Nunito,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight:600;    
     line-height:1.3;
     color:#111
 }
@@ -290,6 +288,7 @@ label
 .home-post-title
 {
     font-weight:800;
+    font-size: 1.1rem;
     color:#333;
     margin-top:1rem;
 }
@@ -690,8 +689,8 @@ blockquote cite
     display:block;
     margin-top:.5rem;
     font-size:.9rem;
-    text-align:right;
-    font-family:-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-align:right;    
+    
     color:rgba(0,0,0,.4)
 }
     
@@ -702,8 +701,7 @@ blockquote.testimonial
     
 blockquote.alert,blockquote.details,blockquote.info,blockquote.note,blockquote.success
 {
-    color:#111;
-    font-family:Nunito,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif
+    color:#111;    
 }
     
 blockquote.alert
@@ -824,7 +822,6 @@ blockquote code
     border-radius: 0 3px 3px 0;
 }
 
-div {
-    font-family: Helvetica, Arial, sans-serif;
+div {    
     box-sizing: border-box;
 }

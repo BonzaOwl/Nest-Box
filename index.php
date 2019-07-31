@@ -101,7 +101,7 @@ get_header(); ?>
       </div>
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-xs-6 col-md-12 col-lg-12">  
         <div class="latest-projects" style="margin-top: 40px; background-color: #f2f2f2; border-radius 5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;padding-top: .75rem; padding-bottom: .75rem">
 
@@ -160,7 +160,7 @@ get_header(); ?>
 
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 
