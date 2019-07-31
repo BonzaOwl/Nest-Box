@@ -9,8 +9,8 @@ add_theme_support( 'title-tag' );
 // Add scripts and stylesheets
 function nestbox_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css', array(), '3.3.6' );
-	wp_enqueue_style( 'feathers', get_template_directory_uri() . '/css/feathers.css' );
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
+	wp_enqueue_style( 'feathers', get_template_directory_uri() . '/css/feathers-min.css' );
+    //wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
     //wp_enqueue_style( 'FontAwesome', get_template_directory_uri() . '/vendor/fontawesome/css/fontawesome.min.css');
     //wp_enqueue_style( 'FontAwesomeBrands', get_template_directory_uri() . '/vendor/fontawesome/css/brands.min.css');
     //wp_enqueue_style( 'FontAwesomeSolid', get_template_directory_uri() . '/vendor/fontawesome/css/solid.min.css');
@@ -121,6 +121,30 @@ function wcr_share_buttons() {
 
     include( locate_template('share.php', false, false) );
 }
+
+// REMOVE WP EMOJI
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+/**
+ * Modify admin footer text
+ */
+ 
+function modify_footer() {
+    echo 'Built By Hand Powered By Beer';
+}
+add_filter( 'admin_footer_text', 'modify_footer' );
+
+/* Remove WP logo from login page */
+
+function custom_login_logo() {
+    echo '<style type ="text/css">.login h1 a { display:none!important; }</style>';
+}
+
+add_action('login_head', 'custom_login_logo');
 
 //----------------------------------------------
 //--------------add theme support for thumbnails
