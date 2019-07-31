@@ -84,7 +84,7 @@ get_header(); ?>
                 'post_type' => 'photography',
                 'order'          => 'desc',
                 'orderby'        => 'publish_date',
-                'showposts'     => '5'
+                'showposts'     => '4'
                 
               );
               $latest = new WP_Query( $args );
