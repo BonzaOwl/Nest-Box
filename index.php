@@ -67,7 +67,6 @@ get_header(); ?>
 
             <div class="all-posts-container">
             <a href="/posts" class="all-posts">View All</a>
-            </a>
 
           </section>
         </div>
@@ -94,6 +93,9 @@ get_header(); ?>
                     endwhile; endif; wp_reset_postdata(); 
                 
             ?>
+
+          <div class="all-posts-container">
+          <a href="/photos" class="all-posts">View More</a>
                 
           </section>
 
