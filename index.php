@@ -67,7 +67,6 @@ get_header(); ?>
 
             <div class="all-posts-container">
             <a href="/posts" class="all-posts">View All</a>
-            </a>
 
           </section>
         </div>
@@ -85,7 +84,7 @@ get_header(); ?>
                 'post_type' => 'photography',
                 'order'          => 'desc',
                 'orderby'        => 'publish_date',
-                'showposts'     => '5'
+                'showposts'     => '4'
                 
               );
               $latest = new WP_Query( $args );
@@ -94,6 +93,9 @@ get_header(); ?>
                     endwhile; endif; wp_reset_postdata(); 
                 
             ?>
+
+          <div class="all-posts-container">
+          <a href="/photos" class="all-posts">View More</a>
                 
           </section>
 
